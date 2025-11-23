@@ -1,0 +1,17 @@
+*{
+  color:#ececec;
+  
+}
+
+body{
+  margin: 0;
+  padding: 0;
+
+}
+
+
+.app{
+  background-color: #212121;
+  display: flex;
+}
+

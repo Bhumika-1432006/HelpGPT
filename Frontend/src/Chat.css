@@ -1,0 +1,80 @@
+.chats {
+    max-width: 700px;
+    padding: 8rem;
+}
+
+.userDiv {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gptDiv {
+    text-align: left;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.userMessage {
+    background-color: #323232;
+    padding: 10px 20px;
+    border-radius: 14px;
+    margin-left: 15rem;
+    max-width: 500px;
+    width: fit-content;
+    color: white; /* default dark mode text */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* or column */
+    overflow-y: scroll;
+    direction: ltr; /* ensures scrollbar stays on the right */
+}
+
+.hljs {
+    border-radius: 14px;
+}
+
+
+
+
+
+/* User message in light mode */
+[data-theme="light"] .userMessage {
+    background-color: #d0e6ff; /* light blue bubble */
+    color: black;              /* user text */
+}
+
+/* GPT message in light mode */
+[data-theme="light"] .gptDiv {
+    background-color: #e0e0e0; /* light gray bubble */
+    color: black;              /* text */
+}
+
+[data-theme="light"] .gptDiv,
+[data-theme="light"] .gptDiv * {
+    color: black !important;   /* force all inner elements to black */
+}
+
+/* Code blocks inside GPT messages */
+[data-theme="light"] .gptDiv .hljs {
+    background-color: #f0f0f0 !important;
+    color: black !important;
+}
+
+startNewChat {
+    transition: color 0.3s ease; /* smooth transition */
+}
+
+/* Light mode */
+[data-theme="light"] .startNewChat {
+    color: black;
+}
+
+/* Dark mode */
+[data-theme="dark"] .startNewChat {
+    color: white;
+}
